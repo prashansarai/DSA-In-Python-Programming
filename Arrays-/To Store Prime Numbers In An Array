@@ -1,0 +1,40 @@
+#Write a program to store first n prime numbers in an array . After storing return the array.﻿
+
+
+
+Input:-
+n=5
+
+Output:- Return the output in the form of an array.
+2
+3
+5
+7
+11
+
+
+def store_numbers(N):
+    """Function to store the number from 1 to n . After storing return the list """
+    for j in range(2,N//2+1):
+        if(N%j==0):
+            return False
+    return True
+    
+def prime_numbers(n):
+  N=2
+  primes=[]
+  while(len(primes)!=n):
+     if (store_numbers(N)):
+        primes.append(N)
+     N+=1
+  return primes
+            
+
+ 
+def main():
+    n=int(input())
+    output = prime_numbers(n)
+    for i in range(0,n):
+        print(output[i])
+main()
+    
